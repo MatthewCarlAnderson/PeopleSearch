@@ -18,6 +18,10 @@ End with an example of getting some data out of the system or using it for a lit
 There are angular instantiation tests which are runnable via the command line (ng test)
 as well as an XUnit Unit Tests project
 
+## Running the application
+
+Right click the solution and select multiple startup projects. Select both PeopleSearch.API and PeapleSearch.UI
+
 ## Deployment
 
 Not contemplated --- at this point it only uses an in memory (and very ugly database)
