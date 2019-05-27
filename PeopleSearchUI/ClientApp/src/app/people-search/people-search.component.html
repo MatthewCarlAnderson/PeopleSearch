@@ -1,0 +1,33 @@
+<h2>People Search</h2>
+<div class="form-group">
+  <label for="search">Person to search for:</label>
+  <input class="form-control" [formControl]="search" placeholder="Search.." id="search">
+</div>
+
+<table class="table table-bordered table-striped" *ngIf="done && !initted">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Age</th>
+      <th>Interests</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people">
+      <td>{{person.firstName}} {{person.lastName}}</td>
+      <td>{{person.address}}</td>
+      <td>{{person.age}}</td>
+      <td>{{person.interests}}</td>
+      <td><img [src]="getImage(person.image)"></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div *ngIf="!done" class="row">
+  <div class="col-12 text-center">
+    <span class="glyphicon glyphicon-hourglass glyphicon-refresh-animate"></span>
+  </div>
+</div>
