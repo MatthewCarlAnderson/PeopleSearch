@@ -34,7 +34,7 @@ namespace PeopleSearchAPI
             services.AddCors(options => options.AddPolicy("Cors", builder =>
             {
                 builder
-                .WithOrigins("http://localhost:4200", "http://localhost:9327")
+                .AllowAnyOrigin()
                 .AllowAnyMethod()
                 .AllowAnyHeader();
             }));
